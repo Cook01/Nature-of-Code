@@ -14,16 +14,6 @@ class Mover{
         this.position.add(this.velocity);
 
         this.velocity.limit(10);
-
-        // if(this.position.x > width)
-        //     this.position.x = 0;
-        // else if(this.position.x < 0)
-        //     this.position.x = width;
-
-        // if(this.position.y > height)
-        //     this.position.y = 0;
-        // else if(this.position.y < 0)
-        //     this.position.y = height;
     }
 
     show(){

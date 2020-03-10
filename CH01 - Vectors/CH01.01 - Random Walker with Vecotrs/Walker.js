@@ -7,8 +7,15 @@ class Walker{
         this.position.x += random(-1, 1);
         this.position.y += random(-1, 1);
 
-        this.position.x %= width;
-        this.position.y %= height;
+        if(this.position.x > width)
+            this.position.x = 0;
+        else if(this.position.x < 0)
+            this.position.x = width;
+            
+        if(this.position.y > height)
+            this.position.y = 0;
+        else if(this.position.y < 0)
+            this.position.y = height;
     }
 
     show(){

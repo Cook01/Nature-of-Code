@@ -4,11 +4,15 @@ let moverB;
 let gravity;
 let wind;
 
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
-	createCanvas(400, 400);
+	createCanvas(windowWidth, windowHeight);
 	
-	moverA = new Mover(150, 200, 2);
-	moverB = new Mover(250, 200, 5);
+	moverA = new Mover(windowWidth/3, 200, 2);
+	moverB = new Mover(2 * windowWidth/3, 200, 5);
 
 	moverA.show();
 	moverB.show();
